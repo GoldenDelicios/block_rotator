@@ -8,6 +8,8 @@ execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:piston[exten
 execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:sticky_piston[extended=false] run scoreboard players set @s RotationSuccess 0
 execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:observer run scoreboard players set @s RotationSuccess 0
 execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:hopper unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:0b}]} unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:1b}]} unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:2b}]} unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:3b}]} unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:4b}]} run scoreboard players set @s RotationSuccess 0
+execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:repeater run scoreboard players set @s RotationSuccess 0
+execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:comparator run scoreboard players set @s RotationSuccess 0
 
 #Dispenser
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:dispenser[facing=east] replace minecraft:dispenser[facing=up]
@@ -56,7 +58,41 @@ execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess 
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:hopper[facing=south] replace minecraft:hopper[facing=down]
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:hopper[facing=down] replace minecraft:hopper[facing=east]
 
+#Repeater
+#	Delay 1
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=1,facing=east] replace minecraft:repeater[delay=1,facing=north]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=1,facing=north] replace minecraft:repeater[delay=1,facing=west]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=1,facing=west] replace minecraft:repeater[delay=1,facing=south]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=1,facing=south] replace minecraft:repeater[delay=1,facing=east]
+#	Delay 2
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=2,facing=east] replace minecraft:repeater[delay=2,facing=north]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=2,facing=north] replace minecraft:repeater[delay=2,facing=west]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=2,facing=west] replace minecraft:repeater[delay=2,facing=south]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=2,facing=south] replace minecraft:repeater[delay=2,facing=east]
+#	Delay 3
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=3,facing=east] replace minecraft:repeater[delay=3,facing=north]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=3,facing=north] replace minecraft:repeater[delay=3,facing=west]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=3,facing=west] replace minecraft:repeater[delay=3,facing=south]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=3,facing=south] replace minecraft:repeater[delay=3,facing=east]
+#	Delay 4
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=4,facing=east] replace minecraft:repeater[delay=4,facing=north]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=4,facing=north] replace minecraft:repeater[delay=4,facing=west]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=4,facing=west] replace minecraft:repeater[delay=4,facing=south]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:repeater[delay=4,facing=south] replace minecraft:repeater[delay=4,facing=east]
+
+#Comparator
+#	Compare mode
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=compare,facing=east] replace minecraft:comparator[mode=compare,facing=north]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=compare,facing=north] replace minecraft:comparator[mode=compare,facing=west]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=compare,facing=west] replace minecraft:comparator[mode=compare,facing=south]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=compare,facing=south] replace minecraft:comparator[mode=compare,facing=east]
+#	Subtract mode
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=subtract,facing=east] replace minecraft:comparator[mode=subtract,facing=north]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=subtract,facing=north] replace minecraft:comparator[mode=subtract,facing=west]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=subtract,facing=west] replace minecraft:comparator[mode=subtract,facing=south]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=subtract,facing=south] replace minecraft:comparator[mode=subtract,facing=east]
+
 #If requirements for rotation not met, set success=0
 execute as @s[scores={RotationSuccess=-1}] unless block ~ ~ ~ minecraft:dispenser unless block ~ ~ ~ minecraft:dropper unless block ~ ~ ~ minecraft:hopper run scoreboard players set @s RotationSuccess 0
 execute as @s[scores={RotationSuccess=-1}] run playsound minecraft:entity.item_frame.break block @s ~ ~ ~
-execute as @s[scores={RotationSuccess=-1}] run scoreboard players set @s RotationSuccess 0
+execute as @s[scores={RotationSuccess=-1}] unless block ~ ~ ~ minecraft:dispenser unless block ~ ~ ~ minecraft:dropper unless block ~ ~ ~ minecraft:hopper unless block ~ ~ ~ minecraft:piston unless block ~ ~ ~ minecraft:sticky_piston unless block ~ ~ ~ minecraft:observer unless block ~ ~ ~ minecraft:repeater unless block ~ ~ ~ minecraft:comparator run scoreboard players set @s RotationSuccess 0

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:rails",
+    "minecraft:hopper",
+    "minecraft:repeater",
+    "minecraft:comparator",
+    "minecraft:end_rod",
+    "#minecraft:slabs",
+    "#minecraft:stairs"
+  ]
+}

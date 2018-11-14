@@ -117,3 +117,7 @@ execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess 
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:hay_block[axis=z] replace minecraft:hay_block[axis=y]
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:hay_block[axis=y] replace minecraft:hay_block[axis=x]
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:hay_block[axis=x] replace minecraft:hay_block[axis=z]
+#	Bone
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:bone_block[axis=z] replace minecraft:bone_block[axis=y]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:bone_block[axis=y] replace minecraft:bone_block[axis=x]
+execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:bone_block[axis=x] replace minecraft:bone_block[axis=z]
