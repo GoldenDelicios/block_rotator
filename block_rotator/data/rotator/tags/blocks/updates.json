@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:repeater",
-    "minecraft:comparator",
-    "#minecraft:stairs"
+    "minecraft:comparator"
   ]
 }
