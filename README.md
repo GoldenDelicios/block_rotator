@@ -36,4 +36,4 @@ Settings can be changed using the `RotationConfig` scoreboard
 * DisableTerracotta: only disables rotating glazed terracotta.
 * EnableDebug: spawns clouds tracking the path of the raycast functions, viewable by F3+B. Useful for debugging.
 
-Latest version: v1.2
+Latest version: v1.2.1
