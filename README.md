@@ -9,7 +9,7 @@ Minecraft datapack: Rename a carrot on a stick to "Wrench" and right click on bl
 The wrench can currently rotate these blocks:
 * All glazed terracotta
 * All rails
-* The following redstone compoenents:
+* The following redstone components:
     * pistons
     * sticky pistons
     * dispensers
@@ -24,16 +24,15 @@ The wrench can currently rotate these blocks:
     * Hay bales
     * Bone blocks
 
-Additionally, there is an experimental feature to *flip* redstone components by using the wrench in your offhand.  
-Implementation of this feature is subject to change in the future.
+Additionally, you can change the Wrench's mode by right clicking in your offhand.
+Information on how the different modes work is available in `WrenchModes.md`.
 
 ## Options
 Settings can be changed using the `RotationConfig` scoreboard
 * DisablePillars: disables rotating wood, logs, and pillar blocks.
 * DisableRails: disables rotating all rails.
-* DisableRedstone: only disables *rotating* redstone components.
-* DisableRedstoneFlip: only disables *flipping* redstone components.
+* DisableRedstone: only disables rotating redstone components.
 * DisableTerracotta: only disables rotating glazed terracotta.
 * EnableDebug: spawns clouds tracking the path of the raycast functions, viewable by F3+B. Useful for debugging.
 
-Latest version: v1.2.1
+Latest version: v1.3
