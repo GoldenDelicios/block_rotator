@@ -1,5 +1,8 @@
 # Wrench modes
 
+The Wrench's mode can be changed by right clicking while the Wrench is held in the player's off hand.
+Using the right mode can make getting the desired rotation faster and easier.
+
 Rotatable blocks are divided into 4 categories:
 * *Terracotta*: All 16 colors of glazed terracotta
 * *Rails*: All 4 types of rails
@@ -16,19 +19,18 @@ Rotatable blocks are divided into 4 categories:
 * Flips the block to the opposite rotation.
 
 ## Face player
-* Only works on *Redstone* and *Pillars*.
+* Works on *Rails*, *Redstone*, and *Pillars*.
 * Rotates the block based on player's rotation.
   * similar to default placement of most *Redstone*.
   * e.g. if player is facing "east" a piston will face "west".
 * If block already facing the player and is of type *Redstone*, Wrench will flip it instead.
-  * *Pillars* cannot and thus will not be flipped.
 
 ## Face click
-* Only works on *Redstone* and *Pillars*.
+* Works on *Rails*, *Redstone*, and *Pillars*.
 * Rotates the block to face the side of the block aimed at.
   * similar to default placement of *Pillars*.
   * e.g. if player clicks the top surface of a piston, the piston will face "up".
-* Wrench will also flip the block if it's already facing the side the player clicked.
+* Wrench will also flip the block if it's already facing the side the player clicked and is of type *Redstone*.
 * Additionally, due to a quirk, clicking on the edges where faces of a block meet (see image)
   can rotate the block to face one of its sides.  
   ![](https://cdn.discordapp.com/attachments/486629788778496017/538021749657174017/unknown.png)
@@ -37,6 +39,7 @@ Rotatable blocks are divided into 4 categories:
 * Special cases:
   * Hoppers can only be rotated in this mode by clicking on the top portion of the block that occupies the full width.
   * Repeaters and comparators will default to "Face player" mode if the top side is clicked.
+  * *Rails* behave the same as if in "Face player" mode.
 
 ## Terracotta mode
 * Only works on *Terracotta*.
@@ -48,7 +51,6 @@ Rotatable blocks are divided into 4 categories:
 
 ## Additional notes
 * If the current Wrench mode does not work with the aimed block, it will fall back onto Default mode.
-* *Rails* do not support any of the new modes; however, plans exist to make it work with "Face player".
 * There is no defined order for conflicting operations.
   * e.g. clicking edges of a block with "Face click".
   * The Wrench will go with whatever rotation succeeds first.
