@@ -8,6 +8,7 @@
     "minecraft:lava",
     "minecraft:fire",
     "#rotator:partialbox",
+    "minecraft:end_rod",
     "minecraft:snow",
     "minecraft:grass",
     "minecraft:fern",
@@ -91,6 +92,7 @@
     "minecraft:dead_fire_coral_fan",
     "minecraft:dead_horn_coral_fan",
     "#minecraft:doors",
+    "#minecraft:signs",
     "minecraft:redstone_wire",
     "minecraft:redstone_torch",
     "minecraft:redstone_wall_torch",
@@ -110,6 +112,7 @@
     "minecraft:dragon_wall_head",
     "#minecraft:banners",
     "minecraft:kelp",
-    "minecraft:conduit"
+    "minecraft:conduit",
+	"#minecraft:anvil"
   ]
 }

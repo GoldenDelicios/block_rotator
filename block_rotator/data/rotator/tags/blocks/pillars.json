@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:logs",
+    "minecraft:quartz_pillar",
+    "minecraft:purpur_pillar",
+    "minecraft:hay_block",
+    "minecraft:bone_block"
+  ]
+}

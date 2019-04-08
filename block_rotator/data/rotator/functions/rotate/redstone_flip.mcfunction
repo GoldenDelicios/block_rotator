@@ -1,15 +1,7 @@
-#Flip redstone components, with cactus option
+#Flip redstone components
 
-#Requirements for rotation: Exclude filled containers, extended pistons, and downwards hoppers from being flipped
-execute as @s[scores={RotationSuccess=0}] run scoreboard players set @s RotationSuccess -1
-execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:dispenser unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:0b}]} unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:1b}]} unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:2b}]} unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:3b}]} unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:4b}]} unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:5b}]} unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:6b}]} unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:7b}]} unless block ~ ~ ~ minecraft:dispenser{Items:[{Slot:8b}]} run scoreboard players set @s RotationSuccess 0
-execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:dropper unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:0b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:1b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:2b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:3b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:4b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:5b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:6b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:7b}]} unless block ~ ~ ~ minecraft:dropper{Items:[{Slot:8b}]} run scoreboard players set @s RotationSuccess 0
-execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:piston[extended=false] run scoreboard players set @s RotationSuccess 0
-execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:sticky_piston[extended=false] run scoreboard players set @s RotationSuccess 0
-execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:observer run scoreboard players set @s RotationSuccess 0
-execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:hopper unless block ~ ~ ~ minecraft:hopper[facing=down] unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:0b}]} unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:1b}]} unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:2b}]} unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:3b}]} unless block ~ ~ ~ minecraft:hopper{Items:[{Slot:4b}]} run scoreboard players set @s RotationSuccess 0
-execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:repeater run scoreboard players set @s RotationSuccess 0
-execute as @s[scores={RotationSuccess=-1}] if block ~ ~ ~ minecraft:comparator run scoreboard players set @s RotationSuccess 0
+#Requirements for rotation: Additionally exclude downwards hoppers from being flipped
+execute as @s[scores={RotationSuccess=0}] if block ~ ~ ~ minecraft:hopper[facing=down] run scoreboard players set @s RotationSuccess -2
 
 #Dispenser
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:dispenser[facing=east] replace minecraft:dispenser[facing=west]
@@ -90,8 +82,3 @@ execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess 
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=subtract,facing=north] replace minecraft:comparator[mode=subtract,facing=south]
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=subtract,facing=west] replace minecraft:comparator[mode=subtract,facing=east]
 execute as @s[scores={RotationSuccess=0}] store result score @s RotationSuccess run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[mode=subtract,facing=south] replace minecraft:comparator[mode=subtract,facing=north]
-
-#If requirements for rotation not met, set success=0
-execute as @s[scores={RotationSuccess=-1}] unless block ~ ~ ~ minecraft:dispenser unless block ~ ~ ~ minecraft:dropper unless block ~ ~ ~ minecraft:hopper run scoreboard players set @s RotationSuccess 0
-execute as @s[scores={RotationSuccess=-1}] run playsound minecraft:entity.item_frame.break block @s ~ ~ ~
-execute as @s[scores={RotationSuccess=-1}] unless block ~ ~ ~ minecraft:dispenser unless block ~ ~ ~ minecraft:dropper unless block ~ ~ ~ minecraft:hopper unless block ~ ~ ~ minecraft:piston unless block ~ ~ ~ minecraft:sticky_piston unless block ~ ~ ~ minecraft:observer unless block ~ ~ ~ minecraft:repeater unless block ~ ~ ~ minecraft:comparator run scoreboard players set @s RotationSuccess 0
