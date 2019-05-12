@@ -23,6 +23,7 @@ The wrench can currently rotate these blocks:
     * Quartz and purpur pillars
     * Hay bales
     * Bone blocks
+* End rods
 
 Additionally, you can change the Wrench's mode by right clicking in your offhand.
 Information on how the different modes work is available in `WrenchModes.md`.
@@ -31,8 +32,9 @@ Information on how the different modes work is available in `WrenchModes.md`.
 Settings can be changed using the `RotationConfig` scoreboard
 * DisablePillars: disables rotating wood, logs, and pillar blocks.
 * DisableRails: disables rotating all rails.
-* DisableRedstone: only disables rotating redstone components.
-* DisableTerracotta: only disables rotating glazed terracotta.
+* DisableRedstone: disables rotating redstone components.
+* DisableRods: disables flipping end rods.
+* DisableTerracotta: disables rotating glazed terracotta.
 * EnableDebug: spawns clouds tracking the path of the raycast functions, viewable by F3+B. Useful for debugging.
 
-Latest version: v1.3
+Version 1.4
