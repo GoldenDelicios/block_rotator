@@ -1,10 +1,10 @@
 #Rotate glazed terracotta
 
 #Get terracotta mode rotation
-execute as @s[nbt={SelectedItem:{tag:{display:{Lore:["Terracotta mode", "North"]}}}}] run tag @s add TerracottaNORTH
-execute as @s[nbt={SelectedItem:{tag:{display:{Lore:["Terracotta mode", "East"]}}}}] run tag @s add TerracottaEAST
-execute as @s[nbt={SelectedItem:{tag:{display:{Lore:["Terracotta mode", "South"]}}}}] run tag @s add TerracottaSOUTH
-execute as @s[nbt={SelectedItem:{tag:{display:{Lore:["Terracotta mode", "West"]}}}}] run tag @s add TerracottaWEST
+execute as @s[nbt={SelectedItem:{tag:{display:{Lore:['{"text":"Terracotta mode"}', '{"text":"North"}']}}}}] run tag @s add TerracottaNORTH
+execute as @s[nbt={SelectedItem:{tag:{display:{Lore:['{"text":"Terracotta mode"}', '{"text":"East"}']}}}}] run tag @s add TerracottaEAST
+execute as @s[nbt={SelectedItem:{tag:{display:{Lore:['{"text":"Terracotta mode"}', '{"text":"South"}']}}}}] run tag @s add TerracottaSOUTH
+execute as @s[nbt={SelectedItem:{tag:{display:{Lore:['{"text":"Terracotta mode"}', '{"text":"West"}']}}}}] run tag @s add TerracottaWEST
 
 
 #White

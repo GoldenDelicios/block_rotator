@@ -1,6 +1,6 @@
 {
-  "replace": false,
-  "values": [
-    "rotator:main"
-  ]
+    "replace": false,
+    "values": [
+        "rotator:main"
+    ]
 }

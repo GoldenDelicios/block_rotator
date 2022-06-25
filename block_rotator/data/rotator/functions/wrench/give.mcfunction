@@ -1,1 +1,1 @@
-give @s minecraft:carrot_on_a_stick{RepairCost: 385438, HideFlags: 1, display: {Lore: ["Default"], Name: "{\"italic\":false,\"text\":\"Wrench\"}"}, Enchantments: [{lvl: 1s, id: "minecraft:unbreaking"}]}
+give @s minecraft:carrot_on_a_stick{RepairCost: 385438, CustomModelData: 1000000, HideFlags: 1, display: {Lore: ['{"text":"Default"}'], Name: '{"italic":false,"text":"Etho\'s Wrench"}'}, Enchantments: [{lvl: 1s, id: "minecraft:unbreaking"}]}

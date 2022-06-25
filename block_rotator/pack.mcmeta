@@ -1,6 +1,6 @@
 {
-  "pack": {
-    "pack_format": 1,
-    "description": "Easily rotate blocks"
-  }
+    "pack": {
+        "pack_format": 10,
+        "description": "Easily rotate blocks"
+    }
 }

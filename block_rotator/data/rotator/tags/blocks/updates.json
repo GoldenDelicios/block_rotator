@@ -1,8 +1,8 @@
 {
-  "replace": false,
-  "values": [
-    "minecraft:repeater",
-    "minecraft:comparator",
-    "minecraft:hopper"
-  ]
+    "replace": false,
+    "values": [
+        "minecraft:repeater",
+        "minecraft:comparator",
+        "minecraft:hopper"
+    ]
 }

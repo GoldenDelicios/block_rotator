@@ -1,7 +1,7 @@
 {
-  "replace": false,
-  "values": [
-    "minecraft:piston_head",
-    "minecraft:moving_piston"
-  ]
+    "replace": false,
+    "values": [
+        "minecraft:piston_head",
+        "minecraft:moving_piston"
+    ]
 }
